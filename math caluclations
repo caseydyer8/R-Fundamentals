@@ -1,0 +1,30 @@
+We can do math with R and it is pretty cool. We will assign some numbers to variables and then do some simple math with R.
+
+First let's start by assiging a value to a variable. Here we are giving quarter_1_sales the value 35657.98. See this below:
+
+quarter_1_sales <- 35657.98
+
+Next, let's add a second value to another variable. Here we are giving quarter_2_sales the value 43810.55. See this below: 
+
+quarter_2_sales <- 43810.55
+
+Now let's do some math. We want to create another variable midyear_sales and we want to add quarter_1_sales to quarter_2_sales to do so. See below for how to do this: 
+
+midyear_sales <- quarter_1_sales + quarter_2_sales
+
+Then we want to create another variable called yearend_sales and multiply midyear_sales by two to get that value. We will do this with this code: 
+
+yearend_sales <- midyear_sales * 2
+
+Now if we highlight all of this code and run it, R will give us all of our results and they are:
+
+# our first calculations
+> quarter_1_sales <- 35657.98
+> quarter_2_sales <- 43810.55
+> midyear_sales <- quarter_1_sales + quarter_2_sales
+> midyear_sales
+[1] 79468.53
+
+> yearend_sales <- midyear_sales * 2
+> yearend_sales
+[1] 158937.1
