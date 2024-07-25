@@ -1,0 +1,41 @@
+Here we are learning to use conditional statements which are if(), else(), and else(). These statements tell R to do complete a certain condition if the condition is met. So to start we are assigning the variable x to 4 and then creating a conditional statement that will say if x > 0 "x is a postitive number". Below is the code that you can use to do this.
+
+x <- 4
+ if (x > 0) { print("x is a positive number")}
+
+When we print this is what R gives us:
+
+>  x <- 4
+>  if (x > 0) { print("x is a positive number")}
+[1] "x is a positive number"
+
+Here we are adding to the if() function and giving the else() function as well. We want x to be given the value of 7, and we want R to tell us if x is "positive" or if x is "either a negative number or zero". We can do this with the code below.
+
+ x <- -7
+ if ( x > 0) { print("x is a positive number")} else {print("x is either a negative number or zero")}
+
+When we print this is what R gives us:
+
+>  x <- -7
+>  if ( x > 0) { print("x is a positive number")} else {print("x is either a negative number or zero")}
+[1] "x is either a negative number or zero"
+
+Here we will use all of the conditional statments at once. We want x to be -1, we want R to tell us that x is either a "negative number", "x is zero", or "x is a positive number". Below is the code to do this.
+
+x <- 1
+if (x < 0) {print("x is a negative number")} else if (x==0) {print("x is zero")} else {print("x is a positive number")}
+
+When we print this is what R gives us:
+
+>  x <- 1
+>  if (x < 0) {print("x is a negative number")} else if (x==0) {print("x is zero")} else {print("x is a positive number")}
+[1] "x is a positive number"
+
+We can change the numbers to get different outputs from R. For instance if we change x to be 7, we will see that "x is a positive number", see the code and what R gives us below. 
+
+x <- 7
+if (x < 0) {print("x is a negative number")} else if (x==0) {print("x is zero")} else {print("x is a positive number")}
+
+> x <- 7
+> if (x < 0) {print("x is a negative number")} else if (x==0) {print("x is zero")} else {print("x is a positive number")}
+[1] "x is a positive number"
