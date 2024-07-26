@@ -1,0 +1,92 @@
+Here we are going to build a data frame called people and then I will show you another one that I built called fruit_ranks that ranks my 5 favorite fruit types. This is a simple way to create a table in R or as R calls it a data frame. 
+
+Let's start by deciding that we want to create a two column data frame and the names of the columns will be names and age. We will use the code below to assign the columns with the data that we want to be contained in them. 
+
+
+names <- c("Chris", "Annie", "Bob", "Donna")
+age <- c(35, 34, 67, 72)
+
+When we run this code, we get back a confirmation that R understood our code:
+
+> names <- c("Chris", "Annie", "Bob", "Donna")
+> age <- c(35, 34, 67, 72)
+
+Next, we need to create the data frame. We will also assign the name people to the data frame. Here is the code to do that: 
+
+people <- data.frame(names, age)
+
+R returns our confirmation that it is valid code like this:
+
+> people <- data.frame(names, age)
+
+Now, lets take a look at our data using the head() function like this: 
+
+head(people)
+
+R returns this:
+
+> head(people)
+  names age
+1 Chris  35
+2 Annie  34
+3   Bob  67
+4 Donna  72
+
+We can look at our data several other ways too, like using glimpse and colnames. Here is what that would look like: 
+
+glimpse(people)
+
+colnames(people)
+
+Here is what we get back from R:
+
+> glimpse(people)
+Rows: 4
+Columns: 2
+$ names <chr> "Chris", "Annie", "Bob", "Donna"
+$ age   <dbl> 35, 34, 67, 72
+
+  
+> colnames(people)
+[1] "names" "age"
+
+We can also add to our data frame using mutate(), here we will add a new column called age_in_20_years that will take the age of the people in the columns and add 20 to it and then display it in a new column.
+
+mutate(people, age_in_20_years = age + 20)
+
+And again here is what we get back from R:
+
+> mutate(people, age_in_20_years = age + 20)
+  names age age_in_20_years
+1 Chris  35              55
+2 Annie  34              54
+3   Bob  67              87
+4 Donna  72              92
+
+Now onto the second data frame as promised. Here I will show all of the code I wrote and then show the results after with out explaining each step and funciton.
+
+fruit <- c("banana", "apple", "orange", "peach", "pineapple")
+rating <- c(3, 5, 4, 1, 2)
+
+fruit_ranks <- data.frame(fruit, rating)
+
+I will talk about this one since we didn't in the last example. View() will bring up your data frame and show you a table. Here we used it to look at our data.
+  
+View(fruit_ranks)
+
+glimpse(fruit_ranks)
+
+Here is what R returns with this code:
+
+> fruit <- c("banana", "apple", "orange", "peach", "pineapple")
+> rating <- c(3, 5, 4, 1, 2)
+  
+> fruit_ranks <- data.frame(fruit, rating)
+  
+> View(fruit_ranks)
+  
+> glimpse(fruit_ranks)
+Rows: 5
+Columns: 2
+$ fruit  <chr> "banana", "apple", "orange", "peach", "pine…
+$ rating <dbl> 3, 5, 4, 1, 2
